@@ -11,8 +11,6 @@ lines=[]
 path = os.environ['APPDATA']
 
 class c:
-    def restart():
-        c.c()
     def c():
         file_path=getFile()
         while file_path == '':
@@ -55,6 +53,7 @@ if __name__=="__main__":
     while True:
         try:
             c.c()
-        except:
+        except Exception as e:
+            print(e)
             result = ctypes.windll.user32.MessageBoxW(0, "An Unkown Error Has Occured.", "", 0x30 | 0x04)
             c.c()
